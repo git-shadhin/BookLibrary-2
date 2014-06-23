@@ -5,4 +5,4 @@ Description :
 
 Application de gestion d'une bibliothèque multisites.
 
-Cette application à été développée suite à un examen de develeppement.
+Cette application à été développée suite à un examen de develeppement C# .NET.
