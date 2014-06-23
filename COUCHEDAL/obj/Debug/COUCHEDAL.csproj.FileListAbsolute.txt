@@ -1,0 +1,7 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\bin\Debug\COUCHEDAL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\bin\Debug\COUCHEDAL.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\obj\Debug\COUCHEDAL.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\obj\Debug\COUCHEDAL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEDAL\obj\Debug\COUCHEDAL.pdb

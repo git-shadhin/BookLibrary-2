@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BibliothequeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BibliothèqueEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Auteur" EntityType="BibliothequeModel.Auteur" />
+    <EntitySet Name="Bibliotheque" EntityType="BibliothequeModel.Bibliotheque" />
+    <EntitySet Name="Emprunts" EntityType="BibliothequeModel.Emprunts" />
+    <EntitySet Name="Etats" EntityType="BibliothequeModel.Etats" />
+    <EntitySet Name="Exemplaire" EntityType="BibliothequeModel.Exemplaire" />
+    <EntitySet Name="Genre" EntityType="BibliothequeModel.Genre" />
+    <EntitySet Name="Gestionnaire" EntityType="BibliothequeModel.Gestionnaire" />
+    <EntitySet Name="Lecteur" EntityType="BibliothequeModel.Lecteur" />
+    <EntitySet Name="Livre" EntityType="BibliothequeModel.Livre" />
+    <EntitySet Name="Personne" EntityType="BibliothequeModel.Personne" />
+    <EntitySet Name="Reservation" EntityType="BibliothequeModel.Reservation" />
+    <EntitySet Name="sysdiagrams" EntityType="BibliothequeModel.sysdiagrams" />
+    <AssociationSet Name="FK_Livre_Auteur1" Association="BibliothequeModel.FK_Livre_Auteur1">
+      <End Role="Auteur" EntitySet="Auteur" />
+      <End Role="Livre" EntitySet="Livre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Livre_Auteur2" Association="BibliothequeModel.FK_Livre_Auteur2">
+      <End Role="Auteur" EntitySet="Auteur" />
+      <End Role="Livre" EntitySet="Livre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Biblio_Lecteur" Association="BibliothequeModel.FK_Biblio_Lecteur">
+      <End Role="Bibliotheque" EntitySet="Bibliotheque" />
+      <End Role="Lecteur" EntitySet="Lecteur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exemplaire_Biblio" Association="BibliothequeModel.FK_Exemplaire_Biblio">
+      <End Role="Bibliotheque" EntitySet="Bibliotheque" />
+      <End Role="Exemplaire" EntitySet="Exemplaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Emprunts_Exemplaire_ID" Association="BibliothequeModel.FK_Emprunts_Exemplaire_ID">
+      <End Role="Exemplaire" EntitySet="Exemplaire" />
+      <End Role="Emprunts" EntitySet="Emprunts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Emprunts_Lecteur" Association="BibliothequeModel.FK_Emprunts_Lecteur">
+      <End Role="Lecteur" EntitySet="Lecteur" />
+      <End Role="Emprunts" EntitySet="Emprunts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exemplaire_Etat" Association="BibliothequeModel.FK_Exemplaire_Etat">
+      <End Role="Etats" EntitySet="Etats" />
+      <End Role="Exemplaire" EntitySet="Exemplaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exemplaire_ISBN" Association="BibliothequeModel.FK_Exemplaire_ISBN">
+      <End Role="Livre" EntitySet="Livre" />
+      <End Role="Exemplaire" EntitySet="Exemplaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gestionnaire_Personne" Association="BibliothequeModel.FK_Gestionnaire_Personne">
+      <End Role="Personne" EntitySet="Personne" />
+      <End Role="Gestionnaire" EntitySet="Gestionnaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservation_Biblio_Gestionnaire" Association="BibliothequeModel.FK_Reservation_Biblio_Gestionnaire">
+      <End Role="Gestionnaire" EntitySet="Gestionnaire" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lecteur_Personne" Association="BibliothequeModel.FK_Lecteur_Personne">
+      <End Role="Personne" EntitySet="Personne" />
+      <End Role="Lecteur" EntitySet="Lecteur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservation_Lecteur" Association="BibliothequeModel.FK_Reservation_Lecteur">
+      <End Role="Lecteur" EntitySet="Lecteur" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservation_Livre" Association="BibliothequeModel.FK_Reservation_Livre">
+      <End Role="Livre" EntitySet="Livre" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="Gestion" Association="BibliothequeModel.Gestion">
+      <End Role="Bibliotheque" EntitySet="Bibliotheque" />
+      <End Role="Gestionnaire" EntitySet="Gestionnaire" />
+    </AssociationSet>
+    <FunctionImport Name="Lecteur_Login" ReturnType="Collection(BibliothequeModel.Lecteur_Login_Result)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Lecteur_SelectAll" ReturnType="Collection(BibliothequeModel.Lecteur_SelectAll_Result)" />
+    <FunctionImport Name="Lecteur_SelectByNom">
+      <Parameter Name="Nom" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BibliothequeModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BibliothequeModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <EntityType Name="Auteur">
+    <Key>
+      <PropertyRef Name="Auteur_ID" />
+    </Key>
+    <Property Name="Auteur_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Prénom" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Date_Naissance" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Deces" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Livre" Relationship="BibliothequeModel.FK_Livre_Auteur1" FromRole="Auteur" ToRole="Livre" />
+    <NavigationProperty Name="Livre1" Relationship="BibliothequeModel.FK_Livre_Auteur2" FromRole="Auteur" ToRole="Livre" />
+  </EntityType>
+  <EntityType Name="Bibliotheque">
+    <Key>
+      <PropertyRef Name="Bibliothèque_ID" />
+    </Key>
+    <Property Name="Bibliothèque_ID" Type="Int32" Nullable="false" />
+    <Property Name="Libellé" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Lecteur" Relationship="BibliothequeModel.FK_Biblio_Lecteur" FromRole="Bibliotheque" ToRole="Lecteur" />
+    <NavigationProperty Name="Exemplaire" Relationship="BibliothequeModel.FK_Exemplaire_Biblio" FromRole="Bibliotheque" ToRole="Exemplaire" />
+    <NavigationProperty Name="Gestionnaire" Relationship="BibliothequeModel.Gestion" FromRole="Bibliotheque" ToRole="Gestionnaire" />
+  </EntityType>
+  <EntityType Name="Emprunts">
+    <Key>
+      <PropertyRef Name="Emprunt_ID" />
+    </Key>
+    <Property Name="Emprunt_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Lecteur_ID" Type="Int32" Nullable="false" />
+    <Property Name="Exemplaire_ID" Type="Int32" Nullable="false" />
+    <Property Name="Date_Emprunt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Retour" Type="DateTime" Precision="3" />
+    <Property Name="Date_Retour_Effective" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Prix" Type="Decimal" Precision="10" Scale="4" />
+    <NavigationProperty Name="Exemplaire" Relationship="BibliothequeModel.FK_Emprunts_Exemplaire_ID" FromRole="Emprunts" ToRole="Exemplaire" />
+    <NavigationProperty Name="Lecteur" Relationship="BibliothequeModel.FK_Emprunts_Lecteur" FromRole="Emprunts" ToRole="Lecteur" />
+  </EntityType>
+  <EntityType Name="Etats">
+    <Key>
+      <PropertyRef Name="Etat_ID" />
+    </Key>
+    <Property Name="Etat_ID" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Libellé" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Exemplaire" Relationship="BibliothequeModel.FK_Exemplaire_Etat" FromRole="Etats" ToRole="Exemplaire" />
+  </EntityType>
+  <EntityType Name="Exemplaire">
+    <Key>
+      <PropertyRef Name="Exemplaire_ID" />
+    </Key>
+    <Property Name="Exemplaire_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Bibliothèque_ID" Type="Int32" Nullable="false" />
+    <Property Name="Etat_ID" Type="Int16" Nullable="false" />
+    <Property Name="Date_Creation" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Bibliotheque" Relationship="BibliothequeModel.FK_Exemplaire_Biblio" FromRole="Exemplaire" ToRole="Bibliotheque" />
+    <NavigationProperty Name="Emprunts" Relationship="BibliothequeModel.FK_Emprunts_Exemplaire_ID" FromRole="Exemplaire" ToRole="Emprunts" />
+    <NavigationProperty Name="Etats" Relationship="BibliothequeModel.FK_Exemplaire_Etat" FromRole="Exemplaire" ToRole="Etats" />
+    <NavigationProperty Name="Livre" Relationship="BibliothequeModel.FK_Exemplaire_ISBN" FromRole="Exemplaire" ToRole="Livre" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="Genre_ID" />
+    </Key>
+    <Property Name="Genre_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Gestionnaire">
+    <Key>
+      <PropertyRef Name="Gestionnaire_ID" />
+    </Key>
+    <Property Name="Gestionnaire_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="Pers_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Personne" Relationship="BibliothequeModel.FK_Gestionnaire_Personne" FromRole="Gestionnaire" ToRole="Personne" />
+    <NavigationProperty Name="Reservation" Relationship="BibliothequeModel.FK_Reservation_Biblio_Gestionnaire" FromRole="Gestionnaire" ToRole="Reservation" />
+    <NavigationProperty Name="Bibliotheque" Relationship="BibliothequeModel.Gestion" FromRole="Gestionnaire" ToRole="Bibliotheque" />
+  </EntityType>
+  <EntityType Name="Lecteur">
+    <Key>
+      <PropertyRef Name="Lecteur_ID" />
+    </Key>
+    <Property Name="Lecteur_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="Bibliothèque_Principale_ID" Type="Int32" Nullable="false" />
+    <Property Name="Nb_Emprunt" Type="Int16" Nullable="false" />
+    <Property Name="Pers_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bibliotheque" Relationship="BibliothequeModel.FK_Biblio_Lecteur" FromRole="Lecteur" ToRole="Bibliotheque" />
+    <NavigationProperty Name="Emprunts" Relationship="BibliothequeModel.FK_Emprunts_Lecteur" FromRole="Lecteur" ToRole="Emprunts" />
+    <NavigationProperty Name="Personne" Relationship="BibliothequeModel.FK_Lecteur_Personne" FromRole="Lecteur" ToRole="Personne" />
+    <NavigationProperty Name="Reservation" Relationship="BibliothequeModel.FK_Reservation_Lecteur" FromRole="Lecteur" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Livre">
+    <Key>
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Titre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Auteur1" Type="Int32" Nullable="false" />
+    <Property Name="Auteur2" Type="Int32" />
+    <Property Name="Genre_ID" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Auteur" Relationship="BibliothequeModel.FK_Livre_Auteur1" FromRole="Livre" ToRole="Auteur" />
+    <NavigationProperty Name="Auteur3" Relationship="BibliothequeModel.FK_Livre_Auteur2" FromRole="Livre" ToRole="Auteur" />
+    <NavigationProperty Name="Exemplaire" Relationship="BibliothequeModel.FK_Exemplaire_ISBN" FromRole="Livre" ToRole="Exemplaire" />
+    <NavigationProperty Name="Reservation" Relationship="BibliothequeModel.FK_Reservation_Livre" FromRole="Livre" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="Pers_ID" />
+    </Key>
+    <Property Name="Pers_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Prenom" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Gestionnaire" Relationship="BibliothequeModel.FK_Gestionnaire_Personne" FromRole="Personne" ToRole="Gestionnaire" />
+    <NavigationProperty Name="Lecteur" Relationship="BibliothequeModel.FK_Lecteur_Personne" FromRole="Personne" ToRole="Lecteur" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+    </Key>
+    <Property Name="Reservation_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Livre_ID" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="Lecteur_ID" Type="Int32" />
+    <Property Name="Gestionnaire_ID" Type="Int32" />
+    <Property Name="Date_Reservation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Annulation" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Gestionnaire" Relationship="BibliothequeModel.FK_Reservation_Biblio_Gestionnaire" FromRole="Reservation" ToRole="Gestionnaire" />
+    <NavigationProperty Name="Lecteur" Relationship="BibliothequeModel.FK_Reservation_Lecteur" FromRole="Reservation" ToRole="Lecteur" />
+    <NavigationProperty Name="Livre" Relationship="BibliothequeModel.FK_Reservation_Livre" FromRole="Reservation" ToRole="Livre" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Livre_Auteur1">
+    <End Role="Auteur" Type="BibliothequeModel.Auteur" Multiplicity="1" />
+    <End Role="Livre" Type="BibliothequeModel.Livre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Auteur">
+        <PropertyRef Name="Auteur_ID" />
+      </Principal>
+      <Dependent Role="Livre">
+        <PropertyRef Name="Auteur1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Livre_Auteur2">
+    <End Role="Auteur" Type="BibliothequeModel.Auteur" Multiplicity="0..1" />
+    <End Role="Livre" Type="BibliothequeModel.Livre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Auteur">
+        <PropertyRef Name="Auteur_ID" />
+      </Principal>
+      <Dependent Role="Livre">
+        <PropertyRef Name="Auteur2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Biblio_Lecteur">
+    <End Role="Bibliotheque" Type="BibliothequeModel.Bibliotheque" Multiplicity="1" />
+    <End Role="Lecteur" Type="BibliothequeModel.Lecteur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bibliotheque">
+        <PropertyRef Name="Bibliothèque_ID" />
+      </Principal>
+      <Dependent Role="Lecteur">
+        <PropertyRef Name="Bibliothèque_Principale_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exemplaire_Biblio">
+    <End Role="Bibliotheque" Type="BibliothequeModel.Bibliotheque" Multiplicity="1" />
+    <End Role="Exemplaire" Type="BibliothequeModel.Exemplaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bibliotheque">
+        <PropertyRef Name="Bibliothèque_ID" />
+      </Principal>
+      <Dependent Role="Exemplaire">
+        <PropertyRef Name="Bibliothèque_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Emprunts_Exemplaire_ID">
+    <End Role="Exemplaire" Type="BibliothequeModel.Exemplaire" Multiplicity="1" />
+    <End Role="Emprunts" Type="BibliothequeModel.Emprunts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exemplaire">
+        <PropertyRef Name="Exemplaire_ID" />
+      </Principal>
+      <Dependent Role="Emprunts">
+        <PropertyRef Name="Exemplaire_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Emprunts_Lecteur">
+    <End Role="Lecteur" Type="BibliothequeModel.Lecteur" Multiplicity="1" />
+    <End Role="Emprunts" Type="BibliothequeModel.Emprunts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lecteur">
+        <PropertyRef Name="Lecteur_ID" />
+      </Principal>
+      <Dependent Role="Emprunts">
+        <PropertyRef Name="Lecteur_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exemplaire_Etat">
+    <End Role="Etats" Type="BibliothequeModel.Etats" Multiplicity="1" />
+    <End Role="Exemplaire" Type="BibliothequeModel.Exemplaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Etats">
+        <PropertyRef Name="Etat_ID" />
+      </Principal>
+      <Dependent Role="Exemplaire">
+        <PropertyRef Name="Etat_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exemplaire_ISBN">
+    <End Role="Livre" Type="BibliothequeModel.Livre" Multiplicity="1" />
+    <End Role="Exemplaire" Type="BibliothequeModel.Exemplaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Livre">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="Exemplaire">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gestionnaire_Personne">
+    <End Role="Personne" Type="BibliothequeModel.Personne" Multiplicity="1" />
+    <End Role="Gestionnaire" Type="BibliothequeModel.Gestionnaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personne">
+        <PropertyRef Name="Pers_ID" />
+      </Principal>
+      <Dependent Role="Gestionnaire">
+        <PropertyRef Name="Pers_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservation_Biblio_Gestionnaire">
+    <End Role="Gestionnaire" Type="BibliothequeModel.Gestionnaire" Multiplicity="0..1" />
+    <End Role="Reservation" Type="BibliothequeModel.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gestionnaire">
+        <PropertyRef Name="Gestionnaire_ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="Gestionnaire_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lecteur_Personne">
+    <End Role="Personne" Type="BibliothequeModel.Personne" Multiplicity="1" />
+    <End Role="Lecteur" Type="BibliothequeModel.Lecteur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personne">
+        <PropertyRef Name="Pers_ID" />
+      </Principal>
+      <Dependent Role="Lecteur">
+        <PropertyRef Name="Pers_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservation_Lecteur">
+    <End Role="Lecteur" Type="BibliothequeModel.Lecteur" Multiplicity="0..1" />
+    <End Role="Reservation" Type="BibliothequeModel.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lecteur">
+        <PropertyRef Name="Lecteur_ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="Lecteur_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservation_Livre">
+    <End Role="Livre" Type="BibliothequeModel.Livre" Multiplicity="1" />
+    <End Role="Reservation" Type="BibliothequeModel.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Livre">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="Livre_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Gestion">
+    <End Role="Bibliotheque" Type="BibliothequeModel.Bibliotheque" Multiplicity="*" />
+    <End Role="Gestionnaire" Type="BibliothequeModel.Gestionnaire" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="Lecteur_Login_Result">
+    <Property Type="Int32" Name="Lecteur_ID" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="Bibliothèque_Principale_ID" Nullable="false" />
+    <Property Type="Int16" Name="Nb_Emprunt" Nullable="false" />
+    <Property Type="Int32" Name="Pers_ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Lecteur_SelectAll_Result">
+    <Property Type="Int32" Name="Lecteur_ID" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="Bibliothèque_Principale_ID" Nullable="false" />
+    <Property Type="Int16" Name="Nb_Emprunt" Nullable="false" />
+    <Property Type="Int32" Name="Pers_ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

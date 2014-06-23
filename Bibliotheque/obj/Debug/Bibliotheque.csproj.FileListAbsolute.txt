@@ -1,0 +1,16 @@
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\BibliothequeSolution.Bibliotheque.resources
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\BibliothequeSolution.FrmLogin.resources
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\BibliothequeSolution.Properties.Resources.resources
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.csproj.GenerateResource.Cache
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe.config
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.exe
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\Bibliotheque.pdb
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEERROR.dll
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEIFAC.dll
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEERROR.pdb
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\bin\Debug\COUCHEIFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.exe
+D:\BibliothequeExamen\Bibliotheque\Bibliotheque\obj\Debug\Bibliotheque.pdb

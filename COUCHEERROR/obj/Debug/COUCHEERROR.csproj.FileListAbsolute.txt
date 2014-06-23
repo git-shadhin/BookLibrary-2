@@ -1,0 +1,5 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEERROR\bin\Debug\COUCHEERROR.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEERROR\bin\Debug\COUCHEERROR.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEERROR\obj\Debug\COUCHEERROR.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEERROR\obj\Debug\COUCHEERROR.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEERROR\obj\Debug\COUCHEERROR.csprojResolveAssemblyReference.cache

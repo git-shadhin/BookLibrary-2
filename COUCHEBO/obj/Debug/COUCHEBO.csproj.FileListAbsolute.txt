@@ -1,0 +1,4 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEBO\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBO\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEBO\obj\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBO\obj\Debug\COUCHEBO.pdb

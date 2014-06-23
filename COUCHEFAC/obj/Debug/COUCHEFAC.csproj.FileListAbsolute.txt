@@ -1,0 +1,15 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEFAC.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEBL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEERROR.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEIFAC.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEDAL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEBL.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEERROR.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEIFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\bin\Debug\COUCHEDAL.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\obj\Debug\COUCHEFAC.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\obj\Debug\COUCHEFAC.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEFAC\obj\Debug\COUCHEFAC.pdb

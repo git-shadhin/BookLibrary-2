@@ -1,0 +1,11 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEBL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEBL.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEDAL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEERROR.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEDAL.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\bin\Debug\COUCHEERROR.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\obj\Debug\COUCHEBL.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\obj\Debug\COUCHEBL.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEBL\obj\Debug\COUCHEBL.pdb

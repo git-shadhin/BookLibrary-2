@@ -1,0 +1,7 @@
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\bin\Debug\COUCHEIFAC.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\bin\Debug\COUCHEIFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\obj\Debug\COUCHEIFAC.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\obj\Debug\COUCHEIFAC.dll
+D:\BibliothequeExamen\Bibliotheque\COUCHEIFAC\obj\Debug\COUCHEIFAC.pdb

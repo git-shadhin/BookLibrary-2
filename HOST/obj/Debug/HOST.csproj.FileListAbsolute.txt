@@ -1,0 +1,16 @@
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\HOST.exe.config
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\HOST.exe
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\HOST.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEFAC.dll
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEIFAC.dll
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEBO.dll
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEBL.dll
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEDAL.dll
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEIFAC.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEBO.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEBL.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\bin\Debug\COUCHEDAL.pdb
+D:\BibliothequeExamen\Bibliotheque\HOST\obj\Debug\HOST.csprojResolveAssemblyReference.cache
+D:\BibliothequeExamen\Bibliotheque\HOST\obj\Debug\HOST.exe
+D:\BibliothequeExamen\Bibliotheque\HOST\obj\Debug\HOST.pdb
